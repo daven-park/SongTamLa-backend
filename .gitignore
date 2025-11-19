@@ -1,0 +1,72 @@
+### Java ###
+*.class
+*.log
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+### VSCode ###
+.vscode/
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Build directories ###
+/build/
+/target/
+/out/
+
+### Gradle ###
+.gradle/
+gradle-app.properties
+!gradle-wrapper.jar
+!*/src/main/**/gradle-wrapper.jar
+!*/src/test/**/gradle-wrapper.jar
+
+### Maven ###
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/maven-wrapper.js
+mvnw
+mvnw.cmd
+
+### Logs ###
+logs/
+*.log
+
+### Spring Boot ###
+/bin/
+/tmp/
+/*.pid
+/*.out
+
+### Test Reports ###
+/test-output/
+/surefire-reports/
+/failsafe-reports/
+
+### Environment ###
+.env
+.env.*
+application-local.yml
+application-local.properties
+application-secret.yml
+application-secret.properties
+
+### Cache ###
+.cache/
+*.swp
+*.swo
+
+### Kotlin (optional) ###
+*.kotlin_module
