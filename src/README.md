@@ -8,6 +8,18 @@
 ## 아키텍쳐
 
 
+
+## commit convention
+
+```
+feat : 함수 기능
+docs : 문서 수정
+chore : 환경 설정 및 파일 변경
+refactor : 코드 리팩터링
+style : css 및 스타일 변경
+test : 테스트 코드 작성
+```
+
 ## 프로젝트 데이터 플로우
 1. 비디오 업로드 및 유튜브 링크 첨부
 2. ffmpeg로 음성파일 추출
@@ -21,15 +33,16 @@
 
 
 ## 기능 개발 진행사항
-- [ ] 비디오 필수 기능 엔터티
+- [X] 비디오 필수 기능 엔터티
   - Video 엔터티
   - ExtractionJob 엔터티
   - TimelineSegment 엔터티
-- [ ] 필수 api 로직 구현
+- [X] 필수 api 로직 구현
   - VideoRepository
   - ExtractionJobRepository
   - TimelineSegmentRepository
 - [ ] DB 연동
+  - local postgresql test
 - [ ] 음악 유추 및 추출 api 연동
 - [ ] 클라우드 배포
 - [ ] ci/cd 파이프라인 구축
