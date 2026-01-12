@@ -31,7 +31,6 @@ public class ExtractionJob {
     @Column(name = "message", columnDefinition = "TEXT")
     private String message;
 
-    @Builder.Default
     @Column(name = "attempt_count", nullable = false)
     private Integer attemptCount = 0;
 
@@ -40,6 +39,7 @@ public class ExtractionJob {
 
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
 
     @Builder
     public ExtractionJob(
@@ -51,6 +51,7 @@ public class ExtractionJob {
         this.status = status;
         this.message = message;
     }
+
 
     @PrePersist
     protected void onCreate(){

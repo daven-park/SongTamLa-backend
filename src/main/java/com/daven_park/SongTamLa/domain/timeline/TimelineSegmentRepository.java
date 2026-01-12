@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface TimelineSegmentRepository extends JpaRepository<TimelineSegment, Long> {
     List<TimelineSegment> findByVideo(Video video);
+    List<TimelineSegment> findByVideoOrderByStartSecondsAsc(Video video);
 }
