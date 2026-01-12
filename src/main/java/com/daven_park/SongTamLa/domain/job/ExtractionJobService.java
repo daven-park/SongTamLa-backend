@@ -12,6 +12,7 @@ import java.util.List;
 public class ExtractionJobService  {
 
     private final ExtractionJobRepository extractionJobRepository;
+    private final ExtractionJobPublisher extractionJobPublisher;
 
     @Transactional
     public ExtractionJob createJob(Video video) {
@@ -20,7 +21,12 @@ public class ExtractionJobService  {
                 .status(ExtractionJob.ExtractionStatus.PENDING)
                 .message("Job created")
                 .build();
-        return extractionJobRepository.save(job);
+
+        ExtractionJob saved = extractionJobRepository.save(job);
+
+        extractionJobPublisher.publishExtractionRequested(saved.getJobId());
+
+        return saved;
     }
 
     @Transactional
