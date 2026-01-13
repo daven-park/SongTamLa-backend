@@ -84,4 +84,16 @@ public class TimelineSegment {
         this.updatedAt = LocalDateTime.now();
     }
 
+    // 정적 팩토리 메서드(추후 제거)
+    public static TimelineSegment create(Video video, int startSeconds, int endSeconds,
+                                         String title, String artistName){
+        TimelineSegment seg = new TimelineSegment();
+        seg.video = video;
+        seg.startSeconds = startSeconds;
+        seg.endSeconds = endSeconds;
+        seg.trackTitle = title;
+        seg.artistName = artistName;
+        return seg;
+    }
+
 }
