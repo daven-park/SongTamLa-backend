@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_DB: songtamla
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD not set}
     ports:
       - "5432:5432"
     volumes:
@@ -19,7 +19,7 @@ services:
     environment:
       - RABBITMQ_ERLANG_COOKIE=rabbitmqCookie
       - RABBITMQ_DEFAULT_USER=admin
-      - RABBITMQ_DEFAULT_PASS=1111
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_PASSWORD:?RABBITMQ_PASSWORD not set}
     ports:
       - "5672:5672"
       - "15672:15672"
